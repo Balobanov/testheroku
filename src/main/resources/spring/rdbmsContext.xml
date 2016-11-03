@@ -24,10 +24,13 @@
         <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
     </bean>
 
+    <!--
+    postgres://rtdlaxtwkngfbs:bvrN6D0MjZ9SuXtjGW2BGx7-h3@ec2-54-75-228-85.eu-west-1.compute.amazonaws.com:5432/daf955odglbj98
+    -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
-        <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
-        <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
+        <property name="url" value="jdbc:postgresql://rtdlaxtwkngfbs:bvrN6D0MjZ9SuXtjGW2BGx7-h3@ec2-54-75-228-85.eu-west-1.compute.amazonaws.com:5432/daf955odglbj98"/>
+        <property name="username" value="rtdlaxtwkngfbs"/>
+        <property name="password" value="bvrN6D0MjZ9SuXtjGW2BGx7-h3"/>
     </bean>
 
     <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
