@@ -16,7 +16,7 @@ import java.util.List;
 import java.sql.SQLException;
 
 @Controller
-public class DepartmentController {
+public class DepartmentController2 {
 
     @Autowired
     DepartmentService departmentService;
